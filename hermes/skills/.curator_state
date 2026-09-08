@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/kali/.hermes/logs/curator/20260905-141016",
+  "last_run_at": "2026-09-05T14:10:16.686520+00:00",
+  "last_run_duration_seconds": 4.5802,
+  "last_run_summary": "auto: no changes; llm: skipped (consolidation off)",
+  "last_run_summary_shown_at": "2026-09-05T14:10:16.686520+00:00",
+  "paused": false,
+  "run_count": 1
+}

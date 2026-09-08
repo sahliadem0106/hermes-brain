@@ -1,0 +1,1 @@
+When a writeup is generic marketing/advice content with no real bug technique, returns [] per the task instructions.
