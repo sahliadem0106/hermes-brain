@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Restore encrypted session history (chat transcripts + state.db + history + pastes).
-# Usage: bash restore-sessions.sh /path/to/SESSIONS-KEY.txt
-# The key file is NOT in the repo — you saved it from the source machine
-# (e.g. ~/hermes-brain-SESSIONS-KEY.txt). Keep it in your password manager.
+# Usage: bash restore-sessions.sh            (uses SESSIONS-KEY.txt in this dir)
+#        bash restore-sessions.sh /path/to/key  (explicit key path)
 set -euo pipefail
-KEY="${1:?usage: restore-sessions.sh /path/to/SESSIONS-KEY.txt}"
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+KEY="${1:-$DIR/SESSIONS-KEY.txt}"
+[ -f "$KEY" ] || { echo "ERROR: key not found at $KEY"; exit 1; }
 HERMES_HOME="${HERMES_HOME:-$HOME/.hermes}"
 cd "$DIR"
 cat sessions-part-* > sessions-all.tar.gz.gpg
