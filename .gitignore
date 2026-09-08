@@ -8,7 +8,7 @@ install_id
 state.db
 state.db-*
 verification_evidence.db
-kanban.db*
+# kanban.db is intentionally INCLUDED (task board state)
 sessions/
 logs/
 pastes/
